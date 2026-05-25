@@ -44,10 +44,10 @@ export function ContactSection() {
   description="I partner with leadership, product, and ops teams to design copilots, automation fabrics, and telemetry loops that scale from pilot to global rollout."
 >
   {/* WRAPPER FIX: Changed to horizontal flex engine with proportional child columns */}
-  <div className="flex w-full items-stretch justify-between gap-6 sm:gap-8 md:flex-col">
+  <div className="flex w-full items-stretch justify-between gap-6 sm:gap-8 lg:flex-row sm:flex-col md:flex-col md:justify-center md:items-center">
     
     {/* LEFT COLUMN: Message Box Form & Channels (Takes 55% layout space on desktop) */}
-    <div className="w-[55%] md:w-full rounded-[20px] sm:rounded-[28px] md:rounded-[32px] border border-border/20 bg-surface/80 p-4 sm:p-6 md:p-8 flex flex-col justify-between">
+    <div className=" w-[55%] md:w-full rounded-[20px] sm:rounded-[28px] md:rounded-[32px] border border-border/20 bg-surface/80 p-4 sm:p-6 md:p-8 flex flex-col justify-between sm:w-full md:w-3/4">
       <div>
         <div className="inline-flex items-center gap-2 rounded-full border border-border/30 bg-card/60 px-3 sm:px-4 py-0.5 sm:py-1 text-[10px] sm:text-xs font-mono uppercase tracking-[0.25em] sm:tracking-[0.35em] text-accent">
           Currently collaborating · open to advisory
@@ -77,7 +77,7 @@ export function ContactSection() {
         </div>
       </div>
 
-      <div className="mt-6 md:mt-8 grid gap-3 sm:gap-4 grid-cols-1 sm:grid-cols-3 w-full">
+      <div className="mt-6 md:mt-8 grid gap-3 sm:gap-4 grid-cols-1 sm:grid-cols-1 w-full">
         {contactChannels.map((channel) => (
           <div key={channel.label} className="rounded-[14px] sm:rounded-2xl border border-border/20 bg-card/70 p-3 sm:p-4 flex flex-col justify-between min-w-0">
             <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm font-semibold text-text">
@@ -97,7 +97,7 @@ export function ContactSection() {
     </div>
 
     {/* RIGHT COLUMN: Profile Status & Social Network Links (Takes 45% layout space on desktop) */}
-    <div className="w-[45%] md:w-full rounded-[20px] sm:rounded-[28px] md:rounded-[32px] border border-border/20 bg-card/70 p-4 sm:p-6 md:p-8 flex flex-col justify-between">
+    <div className="w-[45%] md:w-full rounded-[20px] sm:rounded-[28px] md:rounded-[32px] border border-border/20 bg-card/70 p-4 sm:p-6 md:p-8 flex flex-col justify-between sm:w-full md:w-3/4">
       <div className="flex flex-col items-center text-center">
         <div className="relative overflow-hidden rounded-[20px] sm:rounded-[24px] md:rounded-[28px] h-32 sm:h-40 md:h-48 w-32 sm:w-40 md:w-48 border border-border/10 shadow-md">
           <img

@@ -98,7 +98,7 @@ function SignalCard({ signal }) {
         {isLongText && (
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="md:hidden mt-2 inline-flex items-center justify-center rounded-lg border border-border/30 bg-card/40 hover:bg-card/80 px-2.5 py-1 text-[11px] font-medium text-text backdrop-blur-md shadow-sm transition-all duration-200 active:scale-95"
+            className="md:hidden lg:hidden 2xl:hidden mt-2 inline-flex items-center justify-center rounded-lg border border-border/30 bg-card/40 hover:bg-card/80 px-2.5 py-1 text-[11px] font-medium text-text backdrop-blur-md shadow-sm transition-all duration-200 active:scale-95"
           >
             {isExpanded ? (
               <>

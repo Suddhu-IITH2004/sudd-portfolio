@@ -10,21 +10,30 @@ export function useSectionObserver(sectionId, options = {}) {
     if (!node) return undefined
 
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setActiveSection(sectionId)
-        }
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Simple logic: if any part of the section is visible in the top 70% of viewport
+            const rect = entry.boundingClientRect
+            const viewportHeight = window.innerHeight
+            
+            // Activate if section top is in viewport or section covers viewport
+            if (rect.top < viewportHeight * 0.5 && rect.bottom > 0) {
+              setActiveSection(sectionId)
+            }
+          }
+        })
       },
       {
-        threshold: options.threshold ?? 0.35,
-        rootMargin: options.rootMargin ?? '-20% 0px -40% 0px',
+        threshold: [0, 0.1, 0.3, 0.5],
+        rootMargin: '-20% 0px -30% 0px',
       },
     )
 
     observer.observe(node)
 
     return () => observer.disconnect()
-  }, [sectionId, options.threshold, options.rootMargin, setActiveSection])
+  }, [sectionId, options.rootMargin, setActiveSection])
 
   return ref
 }

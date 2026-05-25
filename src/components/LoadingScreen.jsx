@@ -7,7 +7,7 @@ export function LoadingScreen() {
       initial={{ y: 0 }}
       exit={{ y: '-100%', transition: { duration: 0.8, ease: 'easeInOut' } }}
     >
-      <div className="flex flex-col items-center gap-6 sm:gap-8">
+      <div className="flex flex-col items-center gap-6 sm:gap-8 justify-center">
         <motion.div
           className="text-4xl sm:text-5xl font-display tracking-[0.5em] sm:tracking-[0.7em]"
           initial={{ opacity: 0, scale: 0.85 }}

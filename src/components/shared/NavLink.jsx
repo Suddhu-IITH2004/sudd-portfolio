@@ -6,7 +6,6 @@ export function NavLink({ section }) {
   const activeSection = useUIStore((state) => state.activeSection)
   const closeNav = useUIStore((state) => state.closeNav)
 
-  console.log(`activeSection="${activeSection}"`)
   const handleClick = (event) => {
     event.preventDefault()
     scrollToSection(section.id)

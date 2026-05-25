@@ -66,7 +66,7 @@ const skillsData = {
 
 function MobileSkillsSection() {
   // Track which category dropdown is currently open (null means all are closed)
-  const [openCategory, setOpenCategory] = useState('Frontend');
+  const [openCategory, setOpenCategory] = useState('AI/ML Stack'); // Default to first category open for better mobile UX
   
   const categories = ['AI/ML Stack', 'Languages', 'Frontend', 'Infrastructure & Tools'];
 
