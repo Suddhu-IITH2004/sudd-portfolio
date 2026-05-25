@@ -63,7 +63,7 @@ function AchievementBadge({ achievement, index }) {
       <div className="glass-panel p-4 sm:p-5 md:p-6 h-full flex flex-col items-center justify-center gap-3 sm:gap-4">
         <div className="relative w-full aspect-square flex items-center justify-center overflow-hidden rounded-xl">
           <img
-            src={achievement.image}
+            src={`${import.meta.env.BASE_URL}${achievement.image}`}
             alt={achievement.name}
             className={`w-full h-full object-contain transition-all duration-500 ${
               isHovered ? 'filter-none' : 'grayscale contrast-[1.1]'
