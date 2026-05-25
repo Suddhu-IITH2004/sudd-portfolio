@@ -2,7 +2,7 @@ import { useRef } from 'react'
 import { motion, useScroll } from 'framer-motion'
 import { SectionShell } from '@/components/shared/SectionShell'
 import { AnimatedNumbers } from '@/components/shared/AnimatedNumbers'
-import { OrbitalSkills } from '@/components/shared/OrbitalSkills'
+import SkillsOrbit from '@/components/shared/OrbitalSkills'
 import { AchievementsCarousel } from '@/components/shared/AchievementsCarousel'
 
 // Experience data - CORRECT timeline from resume
@@ -18,7 +18,7 @@ const experiences = [
   },
   {
     role: 'Project Lead',
-    company: 'Presription Audit Project- Vikarabad District PHCs',
+    company: 'Prescription Audit Project- Vikarabad District PHCs',
     companyLink: '#',
     period: 'Oct 2024 — Mar 2025',
     location: 'Vikarabad,Telangana, India',
@@ -72,22 +72,6 @@ const education = [
     location: 'Hyderabad, India',
     description:
       'C.G.PA: 8.23/10.0. Co-Founder of a Drone Startup currently leading Advanced AI Integration to enable autonomous drone navigation and operations.',
-  },
-  {
-    degree: 'Board of Intermediate Education, Andhra Pradesh',
-    institution: 'Sri Chaitanya Junior College',
-    period: '2019 — 2021',
-    location: 'Andhra Pradesh, India',
-    description:
-      'Secured 97.1% in Higher Secondary Examination with a focus on Mathematics, Physics, and Chemistry.',
-  },
-  {
-    degree: 'ICSE Class 10',
-    institution: 'De Paul School',
-    period: '2009-2019',
-    location: 'Visakhapatnam, India',
-    description:
-      'Secured 92.3% in ICSE Class 10 Examination with a focus on Science, Mathematics, and English.',
   },
 ]
 
@@ -195,19 +179,15 @@ export function AboutSection() {
     <SectionShell
       id="about"
       eyebrow="About"
-      title={
-        <span className="inline-flex items-center gap-2 sm:gap-4">
-          Passion <span className="text-accent">Fuels</span> Purpose!
-        </span>
-      }
+      title=""
       description=""
     >
      {/* Biography Section Wrapper - Guarantees side-by-side on desktop, stacks vertically on mobile */}
-<div className="flex w-full items-start justify-between gap-8 md:gap-12 lg:gap-16 md:flex-col mt-8 sm:mt-12">
+<div className="flex w-full items-start justify-between gap-8 md:gap-12 lg:gap-16 md:flex-col sm:gap-12 md:items-center sm:flex-col">
   
   {/* COLUMN 1: Profile Image (Takes exactly 40% on desktop) */}
   <motion.div
-    className="w-[40%] md:w-full relative rounded-2xl bg-surface border border-border/10 p-3 sm:p-4"
+    className="w-[40%] md:w-1/2 relative rounded-2xl bg-surface border border-border/10 p-3 sm:p-4 sm:w-full"
     initial={{ opacity: 0, x: -30 }}
     whileInView={{ opacity: 1, x: 0 }}
     viewport={{ once: true }}
@@ -229,7 +209,7 @@ export function AboutSection() {
 
   {/* COLUMN 2: Bio Text Content (Takes exactly 60% on desktop) */}
   <motion.div
-    className="w-[60%] md:w-full flex flex-col items-start justify-start text-left"
+    className="w-[60%] md:w-full flex flex-col items-start justify-start text-left sm:w-full"
     initial={{ opacity: 0, x: 30 }}
     whileInView={{ opacity: 1, x: 0 }}
     viewport={{ once: true }}
@@ -269,16 +249,13 @@ export function AboutSection() {
 
       {/* Skills Section - Orbital Layout */}
       <motion.div
-        className="mt-16 sm:mt-24 md:mt-32"
+        className=""
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="mb-8 sm:mb-12 md:mb-16 w-full text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-text">
-          Skills
-        </h2>
-        <OrbitalSkills />
+        <SkillsOrbit />
       </motion.div>
 
       {/* Experience Section */}

@@ -47,6 +47,24 @@ body {
   color: #05060a;
 }
 
+/* Focus visible styles for accessibility */
+*:focus-visible {
+  outline: 2px solid rgb(88, 230, 217);
+  outline-offset: 2px;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 @layer base {
   body {
     @apply antialiased bg-canvas text-text;
@@ -81,5 +99,18 @@ body {
 
   .section-grid {
     @apply grid gap-8 lg:gap-6;
+  }
+
+  /* Screen reader only utility */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
   }
 }

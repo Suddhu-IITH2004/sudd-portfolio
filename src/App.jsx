@@ -9,12 +9,20 @@ import { ContactSection } from '@/sections/ContactSection'
 export default function App() {
   return (
     <ThemeProvider>
+      <a 
+        href="#main-content" 
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:rounded-lg focus:bg-accent focus:px-4 focus:py-2 focus:text-canvas focus:font-semibold focus:shadow-lg"
+      >
+        Skip to main content
+      </a>
       <AppLayout>
-        <HeroSection />
-        <AboutSection />
-        <ProjectsSection />
-        <LeadershipSection />
-        <ContactSection />
+        <main id="main-content">
+          <HeroSection />
+          <AboutSection />
+          <ProjectsSection />
+          <LeadershipSection />
+          <ContactSection />
+        </main>
       </AppLayout>
     </ThemeProvider>
   )

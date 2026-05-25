@@ -1,253 +1,330 @@
-# 🚀 Suddhodhan's Portfolio Website
+# Suddhodhan Jajula | AI Engineer Portfolio
 
-A modern, interactive portfolio website showcasing projects, skills, and achievements with cutting-edge web technologies.
+Production-grade portfolio website showcasing AI/ML engineering projects, enterprise RAG systems, and cloud automation work.
 
-![React](https://img.shields.io/badge/React-19.2.6-61DAFB?logo=react&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-8.0.12-646CFF?logo=vite&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.4.14-06B6D4?logo=tailwindcss&logoColor=white)
-![Three.js](https://img.shields.io/badge/Three.js-0.184.0-000000?logo=three.js&logoColor=white)
+🔗 **Live Site:** [https://suddhu-iith2004.github.io/sudd-portfolio/](https://suddhu-iith2004.github.io/sudd-portfolio/)
 
 ---
 
-## ✨ Features
+## 🚀 Tech Stack
 
-- 🎨 **Modern UI/UX** - Beautiful, responsive design with Tailwind CSS
-- 🌓 **Dark/Light Mode** - Theme toggle for comfortable viewing
-- ✨ **Smooth Animations** - Powered by Framer Motion and GSAP
-- 🎯 **Interactive 3D Elements** - Three.js integration for immersive visuals
-- 📱 **Fully Responsive** - Mobile-first design approach
-- ⚡ **Fast Performance** - Built with Vite for optimized builds
-- 🔍 **SEO Optimized** - React Helmet for meta tags
-- 📊 **Animated Statistics** - Dynamic number counters and carousels
-- 🎮 **Orbital Skills Visualization** - Interactive skill display
-- 🔗 **Social Integration** - GitHub, LinkedIn, and contact links
+### Core
+- **React 19** - UI framework
+- **Vite 8** - Build tool and dev server
+- **Tailwind CSS 3** - Utility-first styling
+- **Framer Motion 12** - Animation library
 
----
+### State & Utilities
+- **Zustand 5** - Lightweight state management
+- **React Intersection Observer** - Scroll-based animations
+- **Lucide React** - Icon system
+- **Classnames** - Conditional CSS classes
 
-## 📋 Table of Contents
-
-- [Project Structure](#project-structure)
-- [Tech Stack](#tech-stack)
-- [Getting Started](#getting-started)
-- [Available Scripts](#available-scripts)
-- [Deployment](#deployment)
-- [Customization](#customization)
-- [License](#license)
+### Build & Deploy
+- **GitHub Pages** - Static hosting
+- **gh-pages** - Automated deployment
+- **PostCSS & Autoprefixer** - CSS processing
 
 ---
 
-## 📁 Project Structure
+## 🏗️ Project Structure
 
 ```
 sudd-portfolio-website/
 ├── src/
-│   ├── components/          # Reusable React components
-│   │   ├── layout/         # Layout components (Navbar, Footer, etc.)
-│   │   ├── shared/         # Shared components (Logo, ThemeToggle, etc.)
+│   ├── components/
+│   │   ├── layout/          # Layout components
+│   │   ├── shared/          # Reusable components
+│   │   ├── Navbar.jsx
 │   │   └── LoadingScreen.jsx
-│   ├── sections/           # Page sections
+│   ├── sections/            # Page sections
 │   │   ├── HeroSection.jsx
 │   │   ├── AboutSection.jsx
 │   │   ├── ProjectsSection.jsx
-│   │   ├── StackSection.jsx
-│   │   └── ... (more sections)
-│   ├── data/               # Static data
-│   │   └── sections.js
-│   ├── hooks/              # Custom React hooks
-│   ├── providers/          # Context providers
-│   ├── store/              # State management (Zustand)
-│   ├── utils/              # Utility functions
+│   │   ├── LeadershipSection.jsx
+│   │   └── ContactSection.jsx
+│   ├── hooks/               # Custom React hooks
+│   ├── store/               # Zustand state management
+│   ├── utils/               # Utility functions
+│   ├── providers/           # Context providers
+│   ├── data/                # Static data
 │   ├── App.jsx
 │   ├── main.jsx
 │   └── index.css
-├── public/                 # Static assets
+├── public/
 │   ├── images/
-│   ├── badges/
-│   └── ...
+│   └── badges/
 ├── index.html
 ├── vite.config.js
 ├── tailwind.config.js
-├── postcss.config.js
-├── eslint.config.js
 └── package.json
 ```
 
 ---
 
-## 🛠 Tech Stack
-
-### Frontend Framework
-- **React 19.2.6** - UI library with latest features
-- **Vite 8.0.12** - Lightning-fast build tool
-
-### Styling & Animation
-- **Tailwind CSS 3.4.14** - Utility-first CSS framework
-- **Framer Motion 12.39.0** - React animation library
-- **GSAP 3.15.0** - Professional animation library
-
-### 3D Graphics
-- **Three.js 0.184.0** - 3D JavaScript library
-- **@react-three/fiber 9.6.1** - React renderer for Three.js
-- **@react-three/drei 10.7.7** - Useful helpers for Three.js
-
-### Icons & UI
-- **Lucide React 1.16.0** - Beautiful icon library
-- **FontAwesome 7.2.0** - Icon library
-- **Simple Icons 13.11.1** - Brand icons
-
-### State Management & Utilities
-- **Zustand 5.0.13** - Lightweight state management
-- **React Helmet Async 3.0.0** - Manage document head
-- **React Intersection Observer 10.0.3** - Lazy loading & scroll detection
-
-### Development Tools
-- **ESLint** - Code quality
-- **Prettier** - Code formatting
-- **PostCSS** - CSS processing
-- **gh-pages** - GitHub Pages deployment
-
----
-
-## 🚀 Getting Started
+## 🛠️ Local Development
 
 ### Prerequisites
+- **Node.js 20.19+** or **22.12+**
+- npm or yarn
 
-- Node.js 16+ ([Download](https://nodejs.org/))
-- npm 7+ or yarn
-- Git
+### Setup
 
-### Installation
+```bash
+# Clone the repository
+git clone https://github.com/Suddhu-IITH2004/sudd-portfolio.git
+cd sudd-portfolio-website
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Suddhu-IITH2004/sudd-portfolio.git
-   cd sudd-portfolio-website
-   ```
+# Install dependencies
+npm install
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
+# Start development server
+npm run dev
+```
 
-3. **Start development server**
-   ```bash
-   npm run dev
-   ```
+The site will be available at `http://localhost:5173`
 
-4. **Open in browser**
-   ```
-   http://localhost:5173
-   ```
+### Available Scripts
 
----
-
-## 📜 Available Scripts
-
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start development server with HMR |
-| `npm run build` | Build for production |
-| `npm run preview` | Preview production build locally |
-| `npm run lint` | Run ESLint to check code quality |
-| `npm run format` | Format code with Prettier |
-| `npm run deploy` | Deploy to GitHub Pages |
+```bash
+npm run dev        # Start dev server with hot reload
+npm run build      # Production build
+npm run preview    # Preview production build locally
+npm run lint       # Run ESLint
+npm run format     # Format code with Prettier
+npm run deploy     # Build and deploy to GitHub Pages
+```
 
 ---
 
-## 🌐 Deployment
+## 🚢 Deployment
 
-### Deploy to GitHub Pages
+### GitHub Pages Deployment
 
-1. **Update `package.json` homepage**
-   ```json
-   "homepage": "https://YOUR-USERNAME.github.io/portfolio-website"
-   ```
+This portfolio is configured for automated GitHub Pages deployment.
 
-2. **Build and deploy**
-   ```bash
-   npm run build
-   npm run deploy
-   ```
+**Deploy Command:**
 
-3. **Enable GitHub Pages**
-   - Go to repository Settings → Pages
-   - Select `gh-pages` branch as source
-   - Save
+```bash
+npm run deploy
+```
 
-4. **Visit your website**
-   ```
-   https://YOUR-USERNAME.github.io/portfolio-website
-   ```
+This command:
+1. Builds the production bundle (`npm run build`)
+2. Pushes the `dist/` folder to the `gh-pages` branch
+3. GitHub Pages automatically serves from this branch
 
-For detailed deployment instructions, see [GITHUB_PAGES_DEPLOYMENT.md](./GITHUB_PAGES_DEPLOYMENT.md)
+**Configuration:**
+
+- Base path: `/sudd-portfolio/` (set in `vite.config.js`)
+- Repository: `https://github.com/Suddhu-IITH2004/sudd-portfolio`
+- Branch: `gh-pages`
 
 ---
 
-## 🎨 Customization
+## ⚙️ Configuration
 
-### Update Personal Information
+### ⚠️ Tailwind Breakpoints (IMPORTANT)
 
-1. **Edit `src/data/sections.js`** - Update content for all sections
-2. **Replace images** - Add your photos to `public/images/`
-3. **Update colors** - Modify `tailwind.config.js` for theme colors
-4. **Customize sections** - Edit components in `src/sections/`
+**This project uses INVERTED (desktop-first) Tailwind breakpoints:**
 
-### Theme Configuration
+```js
+// tailwind.config.js
+screens: {
+  '2xl': { max: '1535px' },  // Desktop-first approach
+  'xl':  { max: '1279px' },
+  'lg':  { max: '1023px' },
+  'md':  { max: '767px' },   // Applies to ≤767px
+  'sm':  { max: '639px' },   // Applies to ≤639px
+  'xs':  { max: '479px' },
+}
+```
 
-Edit `tailwind.config.js` to customize:
-- Color palette
-- Typography
-- Spacing
-- Breakpoints
+**What this means:**
 
-### Adding New Sections
+- `md:w-full` applies to screens **≤767px** (mobile/tablet), NOT larger
+- `sm:text-lg` applies to screens **≤639px** (mobile), NOT larger
+- Default (no prefix) applies to **all screens** (desktop-first)
 
-1. Create new component in `src/sections/`
-2. Import in `src/App.jsx`
-3. Add to page layout
-4. Update `src/data/sections.js` with content
+**Example:**
+```jsx
+// This reads: "Half width on desktop, full width on mobile/tablet"
+<div className="w-1/2 md:w-full">
+```
+
+⚠️ **This is opposite to Tailwind's default mobile-first approach.** All responsive classes in this codebase follow this pattern consistently.
+
+### Environment Variables
+
+```bash
+# .env.local (optional)
+VITE_BASE_PATH=/sudd-portfolio/
+```
 
 ---
 
-## 📱 Browser Support
+## 📊 Performance
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+### Bundle Size (Production)
+- HTML: 3.54 kB (gzip: 1.14 kB)
+- CSS: 41.20 kB (gzip: 7.69 kB)
+- JS: ~392 kB (gzip: ~122 kB)
+
+### Optimizations
+- ✅ Code splitting with Vite
+- ✅ Lazy loading images
+- ✅ Framer Motion animations on-demand
+- ✅ Intersection Observer for scroll animations
+- ✅ Reduced loading screen duration (1.5s)
+- ✅ Removed unused dependencies
 
 ---
 
-## 🤝 Contributing
+## ♿ Accessibility
 
-Contributions are welcome! Feel free to:
-- Report bugs
-- Suggest improvements
-- Submit pull requests
+### WCAG 2.1 AA Compliance
+
+- ✅ Skip-to-content link for keyboard navigation
+- ✅ Focus-visible styles on all interactive elements
+- ✅ ARIA labels on icon buttons
+- ✅ Semantic HTML structure (`<main>`, `<nav>`, `<section>`)
+- ✅ Minimum 44x44px touch targets (mobile)
+- ✅ Prefers-reduced-motion support
+- ✅ Keyboard navigation support
+- ✅ `aria-current` for active navigation items
+
+### Tested On
+- Chrome/Edge (Desktop + Mobile)
+- Safari (iOS)
+- Firefox
+- Screen readers (NVDA, VoiceOver)
+
+---
+
+## 🎨 Design System
+
+### Colors
+```css
+--color-canvas: Light sage tint / Dark navy
+--color-surface: Pure white / Deep slate
+--color-text: Dark organic slate / Light slate
+--color-muted: Earth gray / Medium slate
+--color-accent: #58e6d9 (Teal)
+--color-accentSoft: #9c6bff (Purple)
+```
+
+### Typography
+- **Display:** Space Grotesk (headings)
+- **Body:** IBM Plex Sans (paragraphs)
+- **Mono:** JetBrains Mono (code, badges)
+
+### Spacing Scale
+- Uses Tailwind's default spacing scale (4px base)
+- Custom section padding: `py-24 lg:py-20 md:py-16`
+
+---
+
+## 🔍 SEO
+
+### Implemented
+- ✅ Semantic HTML structure
+- ✅ OpenGraph meta tags
+- ✅ Twitter Card meta tags
+- ✅ JSON-LD structured data (Person schema)
+- ✅ Canonical URL
+- ✅ Optimized title and description
+- ✅ Social media preview images
+
+### Meta Tags
+```html
+<title>Suddhodhan Jajula | AI Engineer | Production RAG Systems</title>
+<meta name="description" content="AI Engineer building production RAG systems serving 500+ users..." />
+```
+
+---
+
+## 📝 Content Management
+
+### Updating Projects
+
+Edit `src/sections/ProjectsSection.jsx`:
+
+```jsx
+const featuredProject = {
+  title: 'Your Project Name',
+  summary: 'Brief description...',
+  highlights: ['Bullet 1', 'Bullet 2'],
+  stack: ['Tech1', 'Tech2'],
+  image: '/images/projects/your-image.png',
+  metrics: { users: '500+', documents: '1,000+', latency: '<1.2s' }
+}
+```
+
+### Updating Experience
+
+Edit `src/sections/AboutSection.jsx`:
+
+```jsx
+const experiences = [
+  {
+    role: 'Your Role',
+    company: 'Company Name',
+    companyLink: 'https://company.com',
+    period: 'Start — End',
+    location: 'City, Country',
+    description: 'What you did...'
+  }
+]
+```
+
+---
+
+## 🐛 Known Issues & Technical Debt
+
+### Minor
+- Dark mode toggle commented out (theme system exists but UI hidden)
+- Some console.log statements in NavLink.jsx (debug code)
+
+### Future Enhancements
+- [ ] Add blog section with MDX support
+- [ ] Implement view transitions API
+- [ ] Add analytics (privacy-respecting)
+- [ ] Progressive Web App (PWA) features
+- [ ] Automated Lighthouse CI checks
+
+---
+
+## 🔒 Security
+
+- No API keys or secrets in frontend code
+- All external links use `rel="noopener noreferrer"`
+- HTTPS enforced via GitHub Pages
+- Content Security Policy ready (if needed)
 
 ---
 
 ## 📄 License
 
-This project is open source and available under the MIT License.
+© 2026 Suddhodhan Jajula. All rights reserved.
+
+This portfolio is for personal use and demonstration purposes.
 
 ---
 
-## 📞 Contact
+## 🤝 Contact
 
-- **GitHub:** [Suddhu-IITH2004](https://github.com/Suddhu-IITH2004)
-- **Portfolio:** [Visit Website](https://suddhu-iith2004.github.io/sudd-portfolio)
+- **Email:** suddhu11050@gmail.com
+- **LinkedIn:** [linkedin.com/in/suddhodhan-jajula-682184234](https://www.linkedin.com/in/suddhodhan-jajula-682184234/)
+- **GitHub:** [github.com/Suddhu-IITH2004](https://github.com/Suddhu-IITH2004)
 
 ---
 
 ## 🙏 Acknowledgments
 
-- Built with [React](https://react.dev)
-- Styled with [Tailwind CSS](https://tailwindcss.com)
-- Animated with [Framer Motion](https://www.framer.com/motion/) and [GSAP](https://greensock.com/gsap/)
-- 3D graphics with [Three.js](https://threejs.org)
-- Deployed with [GitHub Pages](https://pages.github.com)
+Built with modern web technologies and best practices for performance, accessibility, and user experience.
 
----
-
-**Made with ❤️ by Suddhodhan**
+Special attention to:
+- Production-first engineering principles
+- Mobile-first responsive design
+- WCAG 2.1 accessibility standards
+- Core Web Vitals optimization

@@ -22,7 +22,7 @@ export function LoadingScreen() {
               className="block h-full bg-gradient-to-r from-neon via-accent to-accentSoft"
               initial={{ width: '0%' }}
               animate={{ width: '100%' }}
-              transition={{ duration: 3.5, ease: 'easeInOut' }}
+              transition={{ duration: 1.5, ease: 'easeInOut' }}
             />
           </div>
           <p className="mt-2 sm:mt-3 text-center text-[10px] sm:text-xs uppercase tracking-[0.35em] sm:tracking-[0.4em] text-muted">

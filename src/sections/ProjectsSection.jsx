@@ -5,16 +5,16 @@ import { SectionShell } from '@/components/shared/SectionShell'
 const featuredProject = {
   title: 'Ryukan Godo GPT',
   summary:
-    'Enterprise RAG chatbot serving 500+ users across Japan & global offices. Hybrid search over 1,000+ documents with GPT-4 responses in <30s latency.',
+    'Enterprise RAG chatbot serving 500+ users across Japan & global offices. Hybrid search over 1,000+ documents with GPT-4 streaming responses in <1.2s first token latency.',
   highlights: [
     '500+ active users across business units',
     'Hybrid search: OpenSearch + semantic retrieval',
-    '<30s response latency with streaming',
+    '<1.2s streaming response latency',
     'Feedback loop & guardrails dashboard'
   ],
   stack: ['OpenSearch', 'AZURE OpenAI', 'LangChain', 'React', 'Python','AWS'],
   image: '/images/projects/ryukan-godo.png',
-  metrics: { users: '500+', documents: '1,000+', latency: '<30s' }
+  metrics: { users: '500+', documents: '1,000+', latency: '<1.2s' }
 }
 
 const projectCards = [
@@ -80,7 +80,7 @@ export function ProjectsSection() {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.6 }}
       >
-        <div className="grid gap-6 md:gap-8 md:grid-cols-[1.05fr,0.95fr]">
+        <div className="grid gap-6 md:gap-8">
           <div className="p-4 sm:p-6 md:p-8">
             <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
               <p className="text-xs font-mono uppercase tracking-[0.35em] text-accent">Flagship Project</p>
@@ -89,9 +89,9 @@ export function ProjectsSection() {
             <h3 className="mt-3 sm:mt-4 text-2xl sm:text-3xl text-text">{featuredProject.title}</h3>
             <p className="mt-2 sm:mt-3 text-sm sm:text-base text-muted leading-relaxed">{featuredProject.summary}</p>
 
-            <div className="mt-4 sm:mt-6 grid grid-cols-2 gap-4"> 
-              <div>
-          <img src={`${import.meta.env.BASE_URL}${featuredProject.image}`} alt={featuredProject.title} className="h-auto sm:h-40 md:h-44 w-30 object-cover" loading="lazy" />
+            <div className="mt-4 sm:mt-6 grid grid-cols-2 md:grid-cols-1 gap-4 sm:grid-cols-1"> 
+              <div className="align-self-center flex justify-center">
+          <img src={`${import.meta.env.BASE_URL}${featuredProject.image}`} alt={featuredProject.title} className="h-auto sm:h-50 md:h-50 rounded-lg w-30 object-cover" loading="lazy" />
               </div>
               <div>
                  {/* Metrics Row */}
@@ -129,7 +129,7 @@ export function ProjectsSection() {
               ))}
             </div>
           </div>
-          <div className="relative hidden md:block">
+          <div className="relative hidden">
             <img
               src={`${import.meta.env.BASE_URL}${featuredProject.image}`}
               alt={featuredProject.title}
@@ -141,7 +141,7 @@ export function ProjectsSection() {
         </div>
       </motion.article>
 
-      <div className="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-2">
+      <div className="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-2 sm:grid-cols-1">
         {projectCards.map((project) => (
           <motion.article
             key={project.title}
@@ -171,7 +171,7 @@ export function ProjectsSection() {
       </div>
 
       <motion.div
-        className="grid gap-4 sm:gap-6 md:grid-cols-[1.2fr,0.8fr]"
+        className="grid gap-4 sm:gap-6 "
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}

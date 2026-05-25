@@ -31,7 +31,7 @@ const socialLinks = [
   },
   {
     label: 'Download Resume',
-    href: '/2026_03_15_resume.pdf',
+    href: `${import.meta.env.BASE_URL}2026_03_15_resume.pdf`,
   },
 ]
 

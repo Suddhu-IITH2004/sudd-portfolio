@@ -60,7 +60,7 @@ export function Navbar() {
       <MotionButton
         type="button"
         onClick={() => scrollToSection('hero')}
-        className="flex h-10 sm:h-12 w-10 sm:w-12 items-center justify-center rounded-full border-2 border-text bg-text font-bold text-surface dark:border-surface"
+        className="flex h-11 sm:h-12 w-11 sm:w-12 items-center justify-center rounded-full border-2 border-text bg-text font-bold text-surface dark:border-surface"
         whileHover={{
           backgroundColor: [
             'rgb(var(--color-text))',
@@ -71,6 +71,7 @@ export function Navbar() {
           ],
           transition: { duration: 1, repeat: Infinity },
         }}
+        aria-label="Scroll to top"
       >
         <span className="text-base sm:text-lg font-bold">SJ</span>
       </MotionButton>
@@ -80,10 +81,10 @@ export function Navbar() {
         <button
           type="button"
           onClick={toggleNav}
-          className="inline-flex h-8 sm:h-10 w-8 sm:w-10 items-center justify-center rounded-full border border-border/30 text-text dark:border-white/20"
+          className="inline-flex h-11 sm:h-11 w-11 sm:w-11 items-center justify-center rounded-full border border-border/30 text-text dark:border-white/20"
           aria-label="Toggle navigation"
         >
-          {navOpen ? <X className="h-4 sm:h-5 w-4 sm:w-5" /> : <Menu className="h-4 sm:h-5 w-4 sm:w-5" />}
+          {navOpen ? <X className="h-5 sm:h-5 w-5 sm:w-5" /> : <Menu className="h-5 sm:h-5 w-5 sm:w-5" />}
         </button>
       </div>
 
@@ -100,7 +101,8 @@ export function Navbar() {
           <button
             type="button"
             onClick={closeNav}
-            className="mt-3 sm:mt-4 text-[10px] sm:text-xs uppercase tracking-[0.25em] sm:tracking-[0.3em] text-muted"
+            className="mt-3 sm:mt-4 py-3 text-[10px] sm:text-xs uppercase tracking-[0.25em] sm:tracking-[0.3em] text-muted"
+            aria-label="Close navigation menu"
           >
             Close
           </button>

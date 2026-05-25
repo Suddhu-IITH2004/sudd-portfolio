@@ -205,7 +205,7 @@ export function LeadershipSection() {
           
         </div>
         {/* Impact metrics grid */}
-      <div className=" pt-5 mb-8 sm:mb-10 md:mb-12 grid gap-3 sm:gap-4 md:gap-4 grid-cols-2 sm:grid-cols-2 md:grid-cols-4">
+      <div className=" pt-5 mb-8 sm:mb-10 md:mb-12 grid gap-3 sm:gap-4 md:gap-4 grid-cols-2 sm:grid-cols-1 md:grid-cols-4">
         {impactMetrics.map((metric, index) => (
           <ImpactMetric key={metric.label} metric={metric} index={index} />
         ))}
@@ -223,7 +223,7 @@ export function LeadershipSection() {
         transition={{ duration: 0.5 }}
       >
         <h3 className="mb-4 sm:mb-6 md:mb-8 text-center text-lg sm:text-xl md:text-2xl font-bold text-text">Key Initiatives</h3>
-        <div className="grid gap-4 sm:gap-5 md:gap-6 grid-cols-2 md:grid-cols-1">
+        <div className="grid gap-4 sm:gap-5 md:gap-6 grid-cols-2 md:grid-cols-1 sm:grid-cols-1">
           {initiatives.map((initiative, index) => (
             <InitiativeCard key={initiative.title} initiative={initiative} index={index} />
           ))}
@@ -239,7 +239,7 @@ export function LeadershipSection() {
         transition={{ duration: 0.6 }}
       >
         <h3 className="mb-4 sm:mb-5 md:mb-6 text-center text-base sm:text-lg md:text-xl font-bold text-text">Leadership Competencies Developed</h3>
-        <div className="grid gap-3 sm:gap-4 md:gap-5 grid-cols-3 sm:grid-cols-2">
+        <div className="grid gap-3 sm:gap-4 md:gap-5 grid-cols-3 sm:grid-cols-1 md:grid-cols-2">
           {leadershipQualities.map((quality, index) => (
             <motion.div
               key={quality.label}

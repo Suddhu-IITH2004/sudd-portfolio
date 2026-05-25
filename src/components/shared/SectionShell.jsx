@@ -18,7 +18,7 @@ export function SectionShell({
       ref={observe ? ref : undefined}
       className={clsx('section-wrapper', 'max-w-6xl', className)}
     >
-      <div className="max-w-3xl space-y-2 sm:space-y-3 mb-6 sm:mb-8 md:mb-10">
+      <div className="max-w-3xl space-y-2 sm:space-y-3 mb-5 sm:mb-5 md:mb-5">
         {eyebrow && (
           <p className="text-xs sm:text-sm font-mono uppercase tracking-[0.25em] sm:tracking-[0.3em] text-accent">
             {eyebrow}
