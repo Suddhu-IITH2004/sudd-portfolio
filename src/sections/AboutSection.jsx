@@ -218,7 +218,7 @@ export function AboutSection() {
     
     <div className="relative overflow-hidden rounded-xl bg-card">
       <img
-        src="/images/profile/sudd-developer-2.png"
+        src={`${import.meta.env.BASE_URL}images/profile/sudd-developer-2.png`}
         alt="Suddhodhan Jajula"
         className="h-auto w-full object-cover filter grayscale contrast-[1.05] hover:grayscale-0 transition duration-500"
       />

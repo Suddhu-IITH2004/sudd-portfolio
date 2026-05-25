@@ -86,7 +86,7 @@ function InitiativeCard({ initiative, index }) {
         {/* Image */}
         <div className="relative aspect-video overflow-hidden rounded-[16px] sm:rounded-[20px] md:rounded-2xl bg-card/50 md:aspect-square order-2 md:order-1">
           <img 
-            src={initiative.image} 
+            src={`${import.meta.env.BASE_URL}${initiative.image}`} 
             alt={initiative.title}
             className="w-full h-full object-cover"
           />

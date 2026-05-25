@@ -91,7 +91,7 @@ export function ProjectsSection() {
 
             <div className="mt-4 sm:mt-6 grid grid-cols-2 gap-4"> 
               <div>
-          <img src={featuredProject.image} alt={featuredProject.title} className="h-auto sm:h-40 md:h-44 w-30 object-cover" loading="lazy" />
+          <img src={`${import.meta.env.BASE_URL}${featuredProject.image}`} alt={featuredProject.title} className="h-auto sm:h-40 md:h-44 w-30 object-cover" loading="lazy" />
               </div>
               <div>
                  {/* Metrics Row */}
@@ -131,7 +131,7 @@ export function ProjectsSection() {
           </div>
           <div className="relative hidden md:block">
             <img
-              src={featuredProject.image}
+              src={`${import.meta.env.BASE_URL}${featuredProject.image}`}
               alt={featuredProject.title}
               className="h-full w-full object-cover rounded-[28px]"
               loading="lazy"
@@ -151,7 +151,7 @@ export function ProjectsSection() {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5 }}
           >
-            <img src={project.image} alt={project.title} className="h-32 sm:h-40 md:h-48 w-full object-cover" loading="lazy" />
+            <img src={`${import.meta.env.BASE_URL}${project.image}`} alt={project.title} className="h-32 sm:h-40 md:h-48 w-full object-cover" loading="lazy" />
             <div className="flex flex-1 flex-col gap-3 sm:gap-4 p-4 sm:p-6">
               <p className="text-xs font-mono uppercase tracking-[0.3em] text-accent">{project.category}</p>
               <div>
@@ -184,7 +184,7 @@ export function ProjectsSection() {
           rel="noreferrer"
           className="group flex flex-col overflow-hidden rounded-[20px] sm:rounded-[28px] border border-border/20 bg-card/70 transition-all duration-300 hover:border-accent/30"
         >
-          <img src={articleSpotlight.image} alt={articleSpotlight.title} className="h-32 sm:h-40 md:h-44 w-full object-cover" loading="lazy" />
+          <img src={`${import.meta.env.BASE_URL}${articleSpotlight.image}`} alt={articleSpotlight.title} className="h-32 sm:h-40 md:h-44 w-full object-cover" loading="lazy" />
           <div className="flex flex-1 flex-col gap-2 sm:gap-4 p-4 sm:p-6">
             <div className="flex flex-col sm:flex-row sm:items-center gap-2">
               <p className="text-xs font-mono uppercase tracking-[0.35em] text-accent">Published Research</p>

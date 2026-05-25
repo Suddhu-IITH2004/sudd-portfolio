@@ -101,7 +101,7 @@ export function ContactSection() {
       <div className="flex flex-col items-center text-center">
         <div className="relative overflow-hidden rounded-[20px] sm:rounded-[24px] md:rounded-[28px] h-32 sm:h-40 md:h-48 w-32 sm:w-40 md:w-48 border border-border/10 shadow-md">
           <img
-            src="/images/profile/sudd-developer-2.png"
+            src={`${import.meta.env.BASE_URL}images/profile/sudd-developer-2.png`}
             alt="Suddhodhan speaking at an event"
             className="h-full w-full object-cover filter grayscale contrast-[1.05]"
             loading="lazy"

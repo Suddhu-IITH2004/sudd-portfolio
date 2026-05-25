@@ -131,7 +131,7 @@ export function HeroSection() {
             <div className="absolute inset-0 bg-gradient-to-tr from-accent/10 to-transparent rounded-3xl filter blur-2xl opacity-70" />
             <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl backdrop-blur-xl p-1.5 sm:p-2 aspect-[3/4] w-auto max-w-[450px] sm:max-w-[320px] md:max-w-md shadow-l">
               <img
-                src={`${import.meta.env.BASE_URL}developer-pic-sudd.png`}
+                src={`${import.meta.env.BASE_URL}images/profile/developer-pic-sudd.png`}
                 alt="AI/ML Engineer Portrait Vector"
                 className="w-full h-full object-contain object-center rounded-xl sm:rounded-2xl filter grayscale contrast-110 hover:grayscale-0 transition duration-500 mix-blend-lighten color-transparent"
               />
