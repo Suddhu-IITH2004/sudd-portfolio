@@ -5,7 +5,7 @@ import path from 'path'
 const repoBase = process.env.VITE_BASE_PATH ?? '/'
 
 export default defineConfig({
-  base: repoBase,
+  base: '/sudd-portfolio/',
   plugins: [react()],
   resolve: {
     alias: {
