@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-canvas: 242, 244, 243;
+  /* Very pale sage tint */
+  --color-surface: 255, 255, 255;
+  /* Pure white */
+  --color-card: 235, 239, 237;
+  /* Soft structural contrast */
+  --color-text: 35, 43, 40;
+  /* Dark organic slate */
+  --color-muted: 115, 125, 120;
+  /* Muted earth gray */
+  --color-border: 218, 224, 221;
+  /* Delicate borderline */
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+html.dark {
+  --color-canvas: 5, 6, 10;
+  --color-surface: 11, 15, 26;
+  --color-card: 15, 23, 42;
+  --color-text: 248, 250, 252;
+  --color-muted: 148, 163, 184;
+  --color-border: 148, 163, 184;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: rgb(var(--color-canvas));
+  color: rgb(var(--color-text));
+  font-family: 'IBM Plex Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  overflow-x: visible; /* Prevents horizontal scroll blocks */
+}
+
+::selection {
+  background-color: rgba(88, 230, 217, 0.35);
+  color: #05060a;
+}
+
+@layer base {
+  body {
+    @apply antialiased bg-canvas text-text;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display tracking-tight text-text;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    background-color: rgba(var(--color-card), 0.92);
+    border: 1px solid rgba(var(--color-border), 0.15);
+    border-radius: 1.5rem;
+    box-shadow: 0 25px 45px rgba(15, 23, 42, 0.08);
+    backdrop-filter: blur(18px);
+  }
+
+  html.dark .glass-panel {
+    background-color: rgba(15, 23, 42, 0.85);
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.55);
+  }
+
+  .section-wrapper {
+    @apply relative mx-auto w-full px-10 py-24 lg:py-20 md:px-6 md:py-16;
+  }
+
+  .section-grid {
+    @apply grid gap-8 lg:gap-6;
+  }
+}
